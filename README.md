@@ -8,11 +8,9 @@ I have chosen C# as I have dealt with something similar in this language some ti
 
 A rover's position is represented by a combination of an x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
 
-In order to control a rover, NASA sends a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
+In order to control a rover, we send a simple string of letters. The possible letters are 'L', 'R' and 'M'. 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
 
 'M' means move forward one grid point, and maintain the same heading.
-
-Assume that the square directly North from (x, y) is (x, y+1).
 
 # Input:
 
@@ -26,6 +24,7 @@ Each rover will be finished sequentially, which means that the second rover won'
 
 # Assumptions
 -	Rover: Position & Location => ( x,y, Z) where Z in (N,E,S,W) – I’ve assigned numbers to these for easier tracking.
+- Assume that the square directly North from (x, y) is (x, y+1).
 -	Zone : Max size of Grid of Positions
 -	Maximum Coordinate  => (maxX, maxY) => eg (5,5)
 
@@ -33,8 +32,8 @@ Each rover will be finished sequentially, which means that the second rover won'
 -	Input :
 -	Zone size
 -	Array of RoverInstruction objects where contains
-o	Rover Position
- Rover Command
+ 	Rover Position
+  Rover Command
 
 -	Rover should spin left
 -	Rover should spin right
