@@ -1,10 +1,10 @@
 # Mars Rover Problem Solution in C#
+The Mars Rover problem is an elegant use of Test Driven Development ie TDD encourages continuous refactoring, and a high test coverage gives you confidence to improve system design and ultimately ensures the success of your solution.
 
-MARS ROVERS
+This is probably a good time to take a look at the TDD cycle. One of the fundamental things, and core benefits of TDD is improving your design. After you have written your implementation, you have the opportunity to improve it, perhaps to make it more efficient, and as long as it still satisfies your test cases, you are good to go.
+It also displays knowledge of Object Orientated Development – Classes, Objects, Inheritance, etc.
 
-A squad of robotic rovers are to be landed by NASA on a plateau on Mars.
-
-This plateau, which is curiously rectangular, must be navigated by the rovers so that their on board cameras can get a complete view of the surrounding terrain to send back to Earth.
+I have chosen C# as I have dealt with something similar in this language some time back.
 
 A rover's position is represented by a combination of an x and y co-ordinates and a letter representing one of the four cardinal compass points. The plateau is divided up into a grid to simplify navigation. An example position might be 0, 0, N, which means the rover is in the bottom left corner and facing North.
 
@@ -23,6 +23,23 @@ The rest of the input is information pertaining to the rovers that have been dep
 The position is made up of two integers and a letter separated by spaces, corresponding to the x and y co-ordinates and the rover's orientation.
 
 Each rover will be finished sequentially, which means that the second rover won't start to move until the first one has finished moving.
+
+# Assumptions
+-	Rover: Position & Location => ( x,y, Z) where Z in (N,E,S,W) – I’ve assigned numbers to these for easier tracking.
+-	Zone : Max size of Grid of Positions
+-	Maximum Coordinate  => (maxX, maxY) => eg (5,5)
+
+-	Message (aaaa..N) in (L, R, M) - Spin Left, Right, Move Forward
+-	Input :
+-	Zone size
+-	Array of RoverInstruction objects where contains
+o	Rover Position
+ Rover Command
+
+-	Rover should spin left
+-	Rover should spin right
+-	Rover should move forward
+
 
 # Output:
 
